@@ -5,7 +5,7 @@ public class hw04_03 {
     }
 
     public static void v1() {
-        for (int i = 40; i <= 60; i ++) {
+        for (int i = 40; i <= 60; i++) {
             if (i % 4 == 0) {
                 System.out.println(i);
             }
@@ -13,6 +13,8 @@ public class hw04_03 {
     }
 
     public static void v2() {
-        System.out.println("later");
+        int i = 40;
+
+
     }
 }

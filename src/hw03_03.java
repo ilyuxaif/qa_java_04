@@ -1,5 +1,3 @@
-import java.lang.Math;
-
 public class hw03_03 {
     public static void main(String[] args) {
         int a = (int) (Math.random() * (100 - 0 + 1) + 0);
