@@ -6,7 +6,7 @@ public class hw02 {
         System.out.println("a + b = " + (a + b));
         System.out.println("a - b = " + (a - b));
         System.out.println("a * b = " + (a * b));
-        System.out.println("a / b = " + (a / b));
+        System.out.println("a / b = " + (1.0 * a / b));
         System.out.println("a % b = " + (a % b));
 
         System.out.println("Число a " + (a % 2 == 0 ? "четное" : "нечетное"));
