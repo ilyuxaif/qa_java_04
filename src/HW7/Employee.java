@@ -11,16 +11,24 @@ package HW7;
 
 public class Employee {
 
-    protected int baseSalary;
-    private int salary;
+    private double baseSalary;
     private String name;
 
-    public int getBaseSalary() {
+    public Employee(double baseSalary, String name) {
+        this.baseSalary = baseSalary;
+        this.name = name;
+    }
+
+    public double getBaseSalary() {
         return baseSalary;
     }
 
     public void setBaseSalary(int baseSalary) {
         this.baseSalary = baseSalary;
+    }
+
+    public double getSalary() {
+        return baseSalary;
     }
 
     public String getName() {
@@ -30,9 +38,4 @@ public class Employee {
     public void setName(String name) {
         this.name = name;
     }
-
-    int getSalary() {
-        return salary;
-    }
-
 }
