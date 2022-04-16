@@ -1,6 +1,6 @@
-package HW7;
+package HW7_1;
 
-public class Manager extends Worker{
+public class Manager extends Worker {
 
     private int numberOfSubordinates;
 

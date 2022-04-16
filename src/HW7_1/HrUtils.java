@@ -1,4 +1,4 @@
-package HW7;
+package HW7_1;
 
 /*Необходимо создать утилитарный класс со следующими методами:
 поиск сотрудника в массиве по его имени
@@ -16,77 +16,88 @@ public class HrUtils {
     /**
      * поиск сотрудника в массиве по его имени
      */
-    public static Employee findEmployee(Employee[] employees, String name) {
+    public static Worker findWorkerByName(Worker[] workers, String name) {
+        for (Worker worker : workers) {
+            if (name.equals(worker.getName())) {
+                return worker;
+            }
+        }
         return null;
     }
 
     /**
      * поиск сотрудника в массиве по вхождению указанной строки в его имени
      *
-     * @param employees array of employees
+     * @param workers array of employees
      * @param search    part of the name
      * @return found employee
      */
-    public static Employee findEmployeeAdvanced(Employee[] employees, String search) {
-        //TODO implement me
+    public static Worker findWorkerBySubName(Worker[] workers, String search) {
+        for (Worker worker : workers) {
+            if (worker.getName().contains(search)) {
+                return worker;
+            }
+        }
         return null;
     }
 
     /**
      * подсчет зарплатного бюджета для всех сотрудников в массиве
-     * @param employees array of employees
+     * @param workers array of employees
      * @return бюджет
      */
-    public static double calculateBudget(Employee[] employees) {
+    public static double totalBudget(Worker[] workers) {
         double budget = 0.0;
-        for (Employee employee: employees) {
-            budget = budget + employee.getSalary();
+        for (Worker worker: workers) {
+            budget = budget + worker.getSalary();
         }
         return budget;
     }
 
     /** поиск наименьшей зарплаты в массиве
-     * @param employees array of employees
+     * @param workers array of employees
      * @return наименьшая зарплата
      */
-    public static int findSmallestSalary(Employee[] employees) {
+    public static int findSmallestSalary(Worker[] workers) {
         //TODO implement me
         return 0;
     }
 
     /** поиск наибольшей зарплаты в массиве
-     * @param employees array of employees
+     * @param workers array of employees
      * @return наименьшая зарплата
      *
      */
-    public static  int findLargetSalary(Employee[] employees) {
+    public static  int findLargestSalary(Worker[] workers) {
         //TODO implement me
-        return 0;
+        return -1;
     }
 
     /** поиск наименьшего количества подчиненных в массиве менеджеров
      *
      *
      */
-    public static Manager findManagerLeastSubordinates(Employee[] employees) {
-        //TODO implement me
-        return null;
-    }
+//    public static int findManagerLeastSubordinates(Worker[] workers) {
+//        for (int i = 0; i < workers.length) {
+//
+//        }
+//        return -1;
+//    }
 
     /** поиск наибольшего количества подчиненных в массиве менеджеров
      *
      *
      */
-    public static Manager findMostSubordinates(Employee[] employees) {
+    public static int findMostSubordinates(Manager[] managers) {
         //TODO implement me
-        return null;
+        return -1;
     }
 
     /** поиск наибольшей надбавки (разнице между базовой зарплатой и выплатой) в массиве менеджеров
      *
      *
      */
-    public static int findLargestBonus(Employee[] employees) {
+    public static double findLargestBonus(Manager[] managers) {
         //TODO implement me
         return -1;
     }
@@ -96,7 +107,7 @@ public class HrUtils {
      *
      *
      */
-    public static int findSmallestBonus(Employee[] employees) {
+    public static double findSmallestBonus(Manager[] managers) {
         //TODO implement me
         return -1;
     }

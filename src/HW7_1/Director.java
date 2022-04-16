@@ -1,4 +1,4 @@
-package HW7;
+package HW7_1;
 
 public class Director extends Manager {
 
