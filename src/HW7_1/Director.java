@@ -7,11 +7,12 @@ public class Director extends Manager {
         super(baseSalary, name, numberOfSubordinates);
     }
 
+    @Override
     public double getSalary () {
         if (getNumberOfSubordinates() == 0) {
-            return getBaseSalary();
+            return super.getSalary();
         } else {
-            return getBaseSalary() * (getNumberOfSubordinates() / 100.0 * 9);
+            return super.getSalary() * (getNumberOfSubordinates() / 100.0 * 9);
         }
     }
 }

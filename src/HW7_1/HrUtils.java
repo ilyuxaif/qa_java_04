@@ -73,24 +73,33 @@ public class HrUtils {
         return -1;
     }
 
-    /** поиск наименьшего количества подчиненных в массиве менеджеров
-     *
-     *
+    /**
+     * поиск наименьшего количества подчиненных в массиве менеджеров
      */
-//    public static int findManagerLeastSubordinates(Worker[] workers) {
-//        for (int i = 0; i < workers.length) {
-//
-//        }
-//        return -1;
-//    }
+    public static Manager findManagerLeastSubordinates(Manager[] managers) {
+        Manager result = managers[0];
+
+        for (int i = 1; i < managers.length; i ++) {
+            if (result.getNumberOfSubordinates() > managers[i].getNumberOfSubordinates()) {
+                result = managers[i];
+            }
+        }
+        return result;
+    }
 
     /** поиск наибольшего количества подчиненных в массиве менеджеров
      *
      *
      */
-    public static int findMostSubordinates(Manager[] managers) {
-        //TODO implement me
-        return -1;
+    public static Manager findMostSubordinates(Manager[] managers) {
+        Manager result = managers[0];
+
+        for (int i = 1; i < managers.length; i ++) {
+            if (result.getNumberOfSubordinates() < managers[i].getNumberOfSubordinates()) {
+                result = managers[i];
+            }
+        }
+        return result;
     }
 
     /** поиск наибольшей надбавки (разнице между базовой зарплатой и выплатой) в массиве менеджеров
